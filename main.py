@@ -62,6 +62,25 @@ def Career(response):
   else:
     print(f'That\'s a nice career to go in, {name}!')
   
+def Birthday(response):
+  if int(response[-4:]) < 1930:
+    print("You can't be that old. Try again.")
+    age2 = int(input("What is your age?"))
+    if age2<120:
+      print("Okay! This more like an age number.")
+    else:
+      print('Let\'s try a different question.')
+        
+  elif int(response[-4:]) < 1960:
+    print('You\'re so old! How do you do it?')
+  elif int(response[-4:]) < 1975:
+    print('Creeping on the years, eh?')
+  elif int(response[-4:]) < 1990:
+    print('Settling down?')
+  elif int(response[-4:]) < 2005:
+    print('Having the time of your life?')
+  else:
+    print('You\'re so young, don\'t waste it!')
 
 name = input('What\'s your name? ')
 print(f'Nice to meet you, {name}!\n')
@@ -81,4 +100,12 @@ while keepGoing:
     print('Thanks for chatting!')
     break
   Career(careers)
+  print('')
+
+  birthday = input('What\'s your birthday? dd/mm/yyyy ')
+  if birthday == 'q':
+    keepGoing = False
+    print('Thanks for chatting!')
+    break
+  Birthday(birthday)
   print('')
