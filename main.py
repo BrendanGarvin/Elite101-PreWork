@@ -83,7 +83,7 @@ def Birthday(response):
     print('You\'re so young, don\'t waste it!')
 
 name = input('What\'s your name? ')
-print(f'Nice to meet you, {name}!\n')
+print(f'Nice to meet you, {name}! You can quit anytime by typing in q!\n')
 
 while keepGoing:
   emotions = input('How do you think people feel emotion? ').lower()
@@ -107,5 +107,12 @@ while keepGoing:
     keepGoing = False
     print('Thanks for chatting!')
     break
-  Birthday(birthday)
+  try:
+    Birthday(birthday)
+  except:
+    birthday = input('Make sure to follow the dd/mm/yyyy format, try again. ')
+    try:
+      Birthday(birthday)
+    except:
+      print('Let\'s move on.')
   print('')
