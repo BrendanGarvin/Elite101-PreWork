@@ -1,6 +1,17 @@
-# Elite101-PreWork
-Create a chatbot for instructional purposes at Code2College for their Elite101 Course
-<br/> Test line for Github Pull request
+# Introduction
 
-## ReadMe-Update
-Branch updated
+
+This is a repository created by *Brendan Garvin*
+
+
+## Usage
+
+
+Run this command to execute the application:
+
+
+`python main.py`
+
+ 
+
+```
